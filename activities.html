@@ -1,0 +1,546 @@
+<!doctype html>
+<html class="no-js" lang="zxx">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Activities</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="manifest" href="site.webmanifest">
+        <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
+        <!-- CSS here -->
+        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+        <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+        <link rel="stylesheet" href="assets/css/gijgo.css">
+        <link rel="stylesheet" href="assets/css/slicknav.css">
+        <link rel="stylesheet" href="assets/css/animate.min.css">
+        <link rel="stylesheet" href="assets/css/magnific-popup.css">
+        <link rel="stylesheet" href="assets/css/fontawesome-all.min.css">
+        <link rel="stylesheet" href="assets/css/themify-icons.css">
+        <link rel="stylesheet" href="assets/css/slick.css">
+        <link rel="stylesheet" href="assets/css/nice-select.css">
+        <link rel="stylesheet" href="assets/css/style.css">
+        <link rel="stylesheet" href="assets/css/responsive.css">
+        <style>
+      .dining-menu-container {
+        max-width: 400px;
+        margin: 80px auto 120px auto;
+        text-align: center;
+      }
+      .dining-menu-title {
+        font-family: 'Playfair Display', serif;
+        font-size: 2.5rem;
+        font-style: italic;
+        letter-spacing: 0.1em;
+        margin-bottom: 2.5rem;
+        font-weight: 500;
+      }
+      .dining-menu-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+      .dining-menu-list li {
+        font-family: 'Playfair Display', serif;
+        font-size: 1.2rem;
+        font-style: italic;
+        color: #222;
+        margin: 0.7rem 0;
+        letter-spacing: 0.08em;
+        position: relative;
+      }
+      .dining-menu-list li.gray {
+        color: #bbb;
+        font-style: italic;
+        font-weight: 500;
+        letter-spacing: 0.12em;
+      }
+      .dining-menu-hr {
+        border: none;
+        border-top: 1.5px solid #222;
+        margin: 0.7rem 0 0.7rem 0;
+        width: 100%;
+        opacity: 0.7;
+      }
+      .lounge-section {
+        background: #fff;
+        padding: 40px 0 60px 0;
+      }
+      .lounge-title {
+        font-family: 'Playfair Display', serif;
+        font-size: 2rem;
+        font-style: italic;
+        color: #b59b5b;
+        margin-bottom: 2.5rem;
+        text-align: center;
+        letter-spacing: 0.08em;
+      }
+      .lounge-grid {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      .lounge-card {
+        background: #faf7f2;
+        border-radius: 12px;
+        box-shadow: 0 4px 24px rgba(0,0,0,0.07);
+        overflow: hidden;
+        transition: box-shadow 0.2s;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+      }
+      .lounge-card:hover {
+        box-shadow: 0 8px 32px rgba(181,155,91,0.13);
+      }
+      .lounge-img {
+        width: 100%;
+        height: 240px;
+        object-fit: cover;
+        border-top-left-radius: 12px;
+        border-top-right-radius: 12px;
+      }
+      .lounge-info {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 24px 20px 20px 20px;
+        gap: 24px;
+      }
+      .lounge-details-box {
+        background: #ded8cb;
+        border-radius: 4px;
+        padding: 16px 18px 12px 18px;
+        flex: 1 1 60%;
+      }
+      .lounge-details-title {
+        color: #b59b5b;
+        font-style: italic;
+        font-weight: 600;
+        margin-bottom: 8px;
+        letter-spacing: 0.04em;
+      }
+      .lounge-details-box ul {
+        padding-left: 18px;
+        margin-bottom: 0;
+      }
+      .lounge-details-box li {
+        margin-bottom: 10px;
+        font-size: 1rem;
+        color: #222;
+      }
+      .lounge-side-details {
+        min-width: 120px;
+        padding-left: 18px;
+        font-size: 0.98rem;
+        color: #222;
+      }
+      .lounge-side-details b {
+        color: #222;
+        font-size: 1.01em;
+        letter-spacing: 0.03em;
+      }
+      .lounge-side-details .mt-3 {
+        margin-top: 1.2em;
+      }
+      @media (max-width: 991px) {
+        .lounge-info { flex-direction: column; gap: 10px; }
+        .lounge-side-details { padding-left: 0; min-width: 0; }
+      }
+      @media (max-width: 767px) {
+        .lounge-grid { flex-direction: column; }
+        .col-md-6 { max-width: 100%; flex: 0 0 100%; }
+        .lounge-img { height: 180px; }
+      }
+      .lounge-name {
+        text-align: center;
+        font-family: 'Playfair Display', serif;
+        font-size: 1.1rem;
+        font-style: italic;
+        color: #b59b5b;
+        margin-top: 10px;
+        margin-bottom: 0;
+        letter-spacing: 0.04em;
+      }
+    </style>
+    <style>
+@media (max-width: 767px) {
+    .slicknav_menu {
+        left: 0 !important;
+        right: auto !important;
+    }
+    .slicknav_btn {
+        float: left !important;
+        left: 0 !important;
+        right: auto !important;
+        margin-left: 18px !important;
+        margin-right: 0 !important;
+    }
+    .slicknav_nav {
+        left: -260px !important;
+        right: auto !important;
+        width: 220px !important;
+        position: fixed !important;
+        top: 0 !important;
+        height: 100vh !important;
+        background: #fff !important;
+        box-shadow: 2px 0 8px rgba(0,0,0,0.08);
+        z-index: 2147483647 !important;
+        transition: left 0.3s cubic-bezier(.4,0,.2,1);
+        overflow-y: auto;
+        pointer-events: auto !important;
+    }
+    .slicknav_menu.slicknav_open .slicknav_nav {
+        left: 0 !important;
+    }
+}
+@media (max-width: 767px) {
+    .main-header .container > .row {
+        min-height: 58px;
+    }
+    .header-icon-right-mobile img {
+        height: 26px !important;
+    }
+    .slicknav_btn {
+        float: left !important;
+        margin-left: 0px !important;
+        margin-top: 25px !important;
+    }
+    .d-flex.justify-content-between.align-items-center {
+        padding: 0 8px 0 2px !important;
+    }
+}
+@media (min-width: 992px) {
+    .header-icon-right img {
+        height: 32px !important;
+    }
+}
+</style>
+   </head>
+   <body>
+    <!-- Preloader Start -->
+    <div id="preloader-active">
+        <div class="preloader d-flex align-items-center justify-content-center">
+            <div class="preloader-inner position-relative">
+                <div class="preloader-circle"></div>
+                <div class="preloader-img pere-text">
+                    <strong>Hotel</strong>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Preloader End -->
+    <header>
+        <!-- Header Start -->
+        <div class="header-slider-area">
+            <div class="main-header ">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <!-- Mobile Header Row: hamburger di kiri atas, logo kecil di kanan atas, ukuran dan tinggi bar sama index.html -->
+                        <div class="col-12 d-block d-lg-none order-1" style="position:relative;">
+                            <div class="d-flex justify-content-between align-items-center" style="position:relative; min-height:58px; padding: 0 8px;">
+                                <div class="mobile_menu mobile-menu-left" style="flex:0 0 auto;"></div>
+                                <div style="flex:1 1 auto;"></div>
+                                <div class="header-icon-right-mobile" style="flex:0 0 auto; display:flex; align-items:center; padding-left:8px;">
+                                    <img src="assets/img/about/goldsuryagrp.svg" alt="Surya Hotel Group" style="height:26px;">
+                                </div>
+                            </div>
+                        </div>
+                        <!-- logo desktop -->
+                        <div class="col-xl-2 col-lg-2 col-12 d-none d-lg-block order-lg-1 text-center text-lg-left">
+                            <div class="logo">
+                               <a href="index.html"><img class="logo-img-responsive" src="assets/img/about/logo.svg" alt=""></a>
+                            </div>
+                        </div>
+                        <div class="col-xl-10 col-lg-8 d-none d-lg-block order-lg-2">
+                            <div class="header-icon-right">
+                                <img src="assets/img/about/goldsuryagrp.svg" alt="Surya Hotel Group" style="height:32px; margin-right: 120px;">
+                            </div>
+                            <!-- main-menu -->
+                            <div class="main-menu f-right d-none d-lg-block">
+                                <nav>
+                                    <ul id="navigation">                                                                                                                                     
+                                        <li><a href="index.html">Home</a></li>
+                                        <li><a href="restaurant.html">Restaurant</a></li>
+                                        <li><a href="services.html">Service & Amenities</a></li>
+                                        <li><a href="elements.html">Meeting Room</a></li>
+                                        <li><a href="rooms.html">Rooms</a></li>
+                                        <li><a href="activities.html">Activities</a></li>
+                                        <li><a href="offers.html">Offers</a></li>
+                                        <li><a href="contact.html">Contact</a></li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>             
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Header End -->
+    </header>
+    
+    <main>
+
+        <div class="slider-area">
+            <div class="single-slider hero-overly slider-height2 d-flex align-items-center" data-background="assets/img/hero/limagumul1.jpg" >
+                <div class="container">
+                    <div class="row ">
+                        <div class="col-md-11 offset-xl-1 offset-lg-1 offset-md-1">
+                            <div class="hero-caption">
+                                <span>Activities</span>
+                                <h2>Explore Kediri</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <section class="activities-area section-padding40">
+            <div class="container">
+                <div class="row justify-content-center mb-5">
+                    <div class="col-xl-8 text-center">
+                        <div class="font-back-tittle mb-20">
+                            <div class="archivment-front">
+                                <span><i class="fas fa-biking" style="font-size: 2rem;"></i></span>
+                                <h2>ACTIVITIES AT KEDIRI</h2>
+                            </div>
+                            <h3 class="archivment-back">Activities</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <!-- Activity 1 -->
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="single-room mb-50">
+                            <div class="room-img">
+                                <img src="assets/img/about/bicycle.jpg" alt="Bicycle">
+                            </div>
+                            <div class="room-caption">
+                                <h4><em>BICYCLE</em></h4>
+                                <p>We provide you Bike for Rent, it might be useful to explore.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Activity 2 -->
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="single-room mb-50">
+                            <div class="room-img">
+                                <img src="assets/img/about/limagumul.jpg" alt="Simpang Lima Gumul">
+                            </div>
+                            <div class="room-caption">
+                                <h4><em>SIMPANG LIMA GUMUL</em></h4>
+                                <p>Built in 2003, Monument Simpang Lima Gumul is a famous monument in Kediri located at the road junction in Desa Tugurejo, Kecamatan Gampengrejo.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Activity 3 -->
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="single-room mb-50">
+                            <div class="room-img">
+                                <img src="assets/img/about/waterfall.jpg" alt="Waterfall at Besuki">
+                            </div>
+                            <div class="room-caption">
+                                <h4><em>WATERFALL AT BESUKI</em></h4>
+                                <p>Beautiful waterfall in Besuki, Desa Jugo. Located at 25km away from the city Kediri, this natural waterfall is not one to miss.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <!-- Activity 4 -->
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="single-room mb-50">
+                            <div class="room-img">
+                                <img src="assets/img/about/gerejamerah.jpg" alt="Red Church">
+                            </div>
+                            <div class="room-caption">
+                                <h4><em>RED CHURCH</em></h4>
+                                <p>GPB Immanuel building or well known as the Red Church was founded in 1904. This is the oldest church in Kediri and was designed by J.A. Boers who was also a pastor at that time.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Activity 5 -->
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="single-room mb-50">
+                            <div class="room-img">
+                                <img src="assets/img/about/surowono.jpg" alt="Surawono Temple">
+                            </div>
+                            <div class="room-caption">
+                                <h4><em>SURAWONO TEMPLE</em></h4>
+                                <p>Situated at Desa Canggu (Pare City). Surawono Temple is a great heritage from Majapahit era that showcases the rich history of King Wengker.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Activity 6 -->
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="single-room mb-50">
+                            <div class="room-img">
+                                <img src="assets/img/about/tegowangi.jpg" alt="Tegowangi Temple">
+                            </div>
+                            <div class="room-caption">
+                                <h4><em>TEGOWANGI TEMPLE</em></h4>
+                                <p>Tegowangi Temple is a funerary of King Bhre Matahun built in 1385. Decorated with beautiful carvings which narrates the story of Wayang Purwo.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <!-- Activity 7 -->
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="single-room mb-50">
+                            <div class="room-img">
+                                <img src="assets/img/about/marialourdes.jpg" alt="Maria Lourdes Cave">
+                            </div>
+                            <div class="room-caption">
+                                <h4><em>MARIA LOURDES CAVE</em></h4>
+                                <p>Also known as "Puhsarang", is the oldest Catholic Church cave in Southeast Asia.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Activity 8 -->
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="single-room mb-50">
+                            <div class="room-img">
+                                <img src="assets/img/about/kelud.jpg" alt="Kelud Mountain">
+                            </div>
+                            <div class="room-caption">
+                                <h4><em>KELUD MOUNTAIN</em></h4>
+                                <p>Kelud Mountain is an active volcanic mountain situated at 27km away from Kota Kediri. A great place for sightseeing, camping and adventure.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Activity 9 -->
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="single-room mb-50">
+                            <div class="room-img">
+                                <img src="assets/img/about/selomangleng.jpg" alt="Selomangleng Cave">
+                            </div>
+                            <div class="room-caption">
+                                <h4><em>SELOMANGLENG CAVE</em></h4>
+                                <p>Selomangleng Cave used to be used by Dewi Kilisuci as a hermitage. She refused to accept the throne and preferred to distance herself from the world by meditating here.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row justify-content-center align-items-center g-2">
+                    <div class="col-lg-6 col-md-6 mb-4">
+                        <div class="single-room mb-50">
+                            <div class="room-img">
+                                <img src="assets/img/about/Kiong.jpg" alt="Maria Lourdes Cave">
+                            </div>
+                            <div class="room-caption">
+                                <h4><em>Tjoe Hwie Kiong Tjoe Hwie Kiong</em></h4>
+                                <p>Tjoe Hwie Kiong Tjoe Hwie Kiong is already known as the oldest temple in the city of Kediri. When you enter the temple courtyard, you will be entertained by a statue of Admiral Zheng He who stands firmly with dragon carvings in the form of a book at the base. So there’s no doubt about the beauty and authenticity</p>
+                            
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 mb-4">
+                        <div class="single-room mb-50">
+                            <div class="room-img">
+                                <img src="assets/img/about/marialourdes.jpg" alt="Maria Lourdes Cave">
+                            </div>
+                            <div class="room-caption">
+                                <h4><em>Nasi Pecel</em></h4>
+                                <p>Nasi Pecel of Jalan Dhoho Pecel Tumpang is one of the typical culinary icon Kediri. NASI PECEL is rice served with mix steamed vegetables with peanut sauce and soybean sauce served with various side dishes such as crackers, fried tofu & fried soybean and other side dishes. Only by walking to the front of Grand Surya Hotel along Dhoho road after sunset you can find dozens of sellers NASI PECEL TUMPANG. For those of you who do not like soybean sauce you can request rice with peanut sauce only.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+       <footer>
+       <!-- Footer Start-->
+       <div class="footer-area black-bg footer-padding">
+           <div class="container">
+               <div class="row d-flex justify-content-between">
+                   <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6">
+                      <div class="single-footer-caption mb-30">
+                         <!-- logo -->
+                         <div class="footer-logo">
+                           <a href="index.html"><img src="assets/img/about/logo.svg" alt=""></a>
+                         </div>
+                         <div class="footer-social footer-social2 margin-left-15">
+                             <a href="#"><i class="fab fa-facebook-f"></i></a>
+                             <a href="#"><i class="fab fa-twitter"></i></a>
+                             <a href="#"><i class="fas fa-globe"></i></a>
+                             <a href="#"><i class="fab fa-behance"></i></a>
+                             <a href="#"><i class="fab fa-whatsapp"></i></a>
+                         </div>
+                      </div>
+                      
+                   </div>
+                   <div class="col-xl-3 col-lg-3 col-md-3 col-sm-5">
+                       <div class="single-footer-caption mb-30">
+                           <div class="footer-tittle">
+                               <h4>Quick Links</h4>
+                               <ul>
+                                   <li><a href="restaurant.html">Restaurant</a></li>
+                                   <li><a href="services.html">Services</a></li>
+                                   <li><a href="elements.html">Meeting Room</a></li>
+                                   <li><a href="rooms.html">Rooms</a></li>
+                               </ul>
+                           </div>
+                       </div>
+                   </div>
+                   <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3">
+                       <div class="single-footer-caption mb-30">
+                           <div class="footer-tittle">
+                               <h4>Reservations</h4>
+                               <ul>
+                                   <li><a href="#">Tel: +62 354 686 000</a></li>
+                                   <li><a href="#">Skype: SuryaHotelGroup</a></li>
+                                   <li><a href="#">reservations@hotelriver.com</a></li>
+                               </ul>
+                           </div>
+                       </div>
+                   </div>
+                   <div class="col-xl-3 col-lg-3 col-md-4  col-sm-5">
+                       <div class="single-footer-caption mb-30">
+                           <div class="footer-tittle">
+                               <h4>Our Location</h4>
+                               <ul>
+                                   <li><a href="#">Jl. Dhoho 95, Kemasan - Kota Kediri,</a></li>
+                                   <li><a href="#">Jawa Timur – Indonesia 64129</a></li>
+                               </ul>
+                               <!-- Form -->
+                       
+                           </div>
+                       </div>
+                   </div>
+                   <div class="footer-pera">
+                    <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> Surya Hotel group All rights reserved</a>
+<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+               </div>
+               </div>
+           </div>
+       </div>
+       <!-- Footer End-->
+   </footer>
+    <!-- JS here -->
+    <script src="./assets/js/vendor/modernizr-3.5.0.min.js"></script>
+    <script src="./assets/js/vendor/jquery-1.12.4.min.js"></script>
+    <script src="./assets/js/popper.min.js"></script>
+    <script src="./assets/js/bootstrap.min.js"></script>
+    <script src="./assets/js/jquery.slicknav.min.js"></script>
+    <script src="./assets/js/owl.carousel.min.js"></script>
+    <script src="./assets/js/slick.min.js"></script>
+    <script src="./assets/js/gijgo.min.js"></script>
+    <script src="./assets/js/wow.min.js"></script>
+    <script src="./assets/js/animated.headline.js"></script>
+    <script src="./assets/js/jquery.magnific-popup.js"></script>
+    <script src="./assets/js/jquery.scrollUp.min.js"></script>
+    <script src="./assets/js/jquery.nice-select.min.js"></script>
+    <script src="./assets/js/jquery.sticky.js"></script>
+    <script src="./assets/js/contact.js"></script>
+    <script src="./assets/js/jquery.form.js"></script>
+    <script src="./assets/js/jquery.validate.min.js"></script>
+    <script src="./assets/js/mail-script.js"></script>
+    <script src="./assets/js/jquery.ajaxchimp.min.js"></script>
+    <script src="./assets/js/plugins.js"></script>
+    <script src="./assets/js/main.js"></script>
+    </body>
+</html> 

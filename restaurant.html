@@ -1,0 +1,590 @@
+<!doctype html>
+<html class="no-js" lang="zxx">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Restaurant</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
+        <!-- CSS here -->
+        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+        <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+        <link rel="stylesheet" href="assets/css/gijgo.css">
+        <link rel="stylesheet" href="assets/css/slicknav.css">
+        <link rel="stylesheet" href="assets/css/animate.min.css">
+        <link rel="stylesheet" href="assets/css/magnific-popup.css">
+        <link rel="stylesheet" href="assets/css/fontawesome-all.min.css">
+        <link rel="stylesheet" href="assets/css/themify-icons.css">
+        <link rel="stylesheet" href="assets/css/slick.css">
+        <link rel="stylesheet" href="assets/css/nice-select.css">
+        <link rel="stylesheet" href="assets/css/style.css">
+        <link rel="stylesheet" href="assets/css/responsive.css">
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+        <style>
+          .dining-menu-container {
+            max-width: 400px;
+            margin: 80px auto 120px auto;
+            text-align: center;
+          }
+          .dining-menu-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            font-style: italic;
+            letter-spacing: 0.1em;
+            margin-bottom: 2.5rem;
+            font-weight: 500;
+          }
+          .dining-menu-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+          }
+          .dining-menu-list li {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.2rem;
+            font-style: italic;
+            color: #222;
+            margin: 0.7rem 0;
+            letter-spacing: 0.08em;
+            position: relative;
+          }
+          .dining-menu-list li.gray {
+            color: #bbb;
+            font-style: italic;
+            font-weight: 500;
+            letter-spacing: 0.12em;
+          }
+          .dining-menu-hr {
+            border: none;
+            border-top: 1.5px solid #222;
+            margin: 0.7rem 0 0.7rem 0;
+            width: 100%;
+            opacity: 0.7;
+          }
+          .lounge-section {
+            background: #fff;
+            padding: 40px 0 60px 0;
+          }
+          .lounge-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            font-style: italic;
+            color: #b59b5b;
+            margin-bottom: 2.5rem;
+            text-align: center;
+            letter-spacing: 0.08em;
+          }
+          .lounge-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+          }
+          .lounge-card {
+            background: #faf7f2;
+            border-radius: 12px;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.07);
+            overflow: hidden;
+            transition: box-shadow 0.2s;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+          }
+          .lounge-card:hover {
+            box-shadow: 0 8px 32px rgba(181,155,91,0.13);
+          }
+          .lounge-img {
+            width: 100%;
+            height: 240px;
+            object-fit: cover;
+            border-top-left-radius: 12px;
+            border-top-right-radius: 12px;
+          }
+          .lounge-info {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            padding: 24px 20px 20px 20px;
+            gap: 24px;
+          }
+          .lounge-details-box {
+            background: #ded8cb;
+            border-radius: 4px;
+            padding: 16px 18px 12px 18px;
+            flex: 1 1 60%;
+          }
+          .lounge-details-title {
+            color: #b59b5b;
+            font-style: italic;
+            font-weight: 600;
+            margin-bottom: 8px;
+            letter-spacing: 0.04em;
+          }
+          .lounge-details-box ul {
+            padding-left: 18px;
+            margin-bottom: 0;
+          }
+          .lounge-details-box li {
+            margin-bottom: 10px;
+            font-size: 1rem;
+            color: #222;
+          }
+          .lounge-side-details {
+            min-width: 120px;
+            padding-left: 18px;
+            font-size: 0.98rem;
+            color: #222;
+          }
+          .lounge-side-details b {
+            color: #222;
+            font-size: 1.01em;
+            letter-spacing: 0.03em;
+          }
+          .lounge-side-details .mt-3 {
+            margin-top: 1.2em;
+          }
+          @media (max-width: 991px) {
+            .lounge-info { flex-direction: column; gap: 10px; }
+            .lounge-side-details { padding-left: 0; min-width: 0; }
+          }
+          @media (max-width: 767px) {
+            .lounge-grid { flex-direction: column; }
+            .col-md-6 { max-width: 100%; flex: 0 0 100%; }
+            .lounge-img { height: 180px; }
+          }
+          .lounge-name {
+            text-align: center;
+            font-family: 'Playfair Display', serif;
+            font-size: 1.1rem;
+            font-style: italic;
+            color: #b59b5b;
+            margin-top: 10px;
+            margin-bottom: 0;
+            letter-spacing: 0.04em;
+          }
+        </style>
+        <style>
+    @media (max-width: 767px) {
+        .slicknav_menu {
+            left: 0 !important;
+            right: auto !important;
+        }
+        .slicknav_btn {
+            float: left !important;
+            left: 0 !important;
+            right: auto !important;
+            margin-left: 18px !important;
+            margin-right: 0 !important;
+        }
+        .slicknav_nav {
+            left: -260px !important;
+            right: auto !important;
+            width: 220px !important;
+            position: fixed !important;
+            top: 0 !important;
+            height: 100vh !important;
+            background: #fff !important;
+            box-shadow: 2px 0 8px rgba(0,0,0,0.08);
+            z-index: 2147483647 !important;
+            transition: left 0.3s cubic-bezier(.4,0,.2,1);
+            overflow-y: auto;
+            pointer-events: auto !important;
+        }
+        .slicknav_menu.slicknav_open .slicknav_nav {
+            left: 0 !important;
+        }
+    }
+    @media (max-width: 767px) {
+        .main-header .container > .row {
+            min-height: 58px;
+        }
+        .header-icon-right-mobile img {
+            height: 26px !important;
+        }
+        .slicknav_btn {
+            float: left !important;
+            margin-left: 0px !important;
+            margin-top: 25px !important;
+        }
+        .d-flex.justify-content-between.align-items-center {
+            padding: 0 8px 0 2px !important;
+        }
+    }
+    @media (min-width: 992px) {
+        .header-icon-right img {
+            height: 32px !important;
+        }
+    }
+    </style>
+    </head>
+    <body>
+    <!-- Preloader Start -->
+    <div id="preloader-active">
+        <div class="preloader d-flex align-items-center justify-content-center">
+            <div class="preloader-inner position-relative">
+                <div class="preloader-circle"></div>
+                <div class="preloader-img pere-text">
+                    <strong>Hotel</strong>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Preloader End -->
+    <header>
+        <!-- Header Start -->
+        <div class="header-slider-area">
+            <div class="main-header ">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <!-- Mobile Header Row: hamburger di kiri atas, logo kecil di kanan atas, ukuran dan tinggi bar sama index.html -->
+                        <div class="col-12 d-block d-lg-none order-1" style="position:relative;">
+                            <div class="d-flex justify-content-between align-items-center" style="position:relative; min-height:58px; padding: 0 8px;">
+                                <div class="mobile_menu mobile-menu-left" style="flex:0 0 auto;"></div>
+                                <div style="flex:1 1 auto;"></div>
+                                <div class="header-icon-right-mobile" style="flex:0 0 auto; display:flex; align-items:center; padding-left:8px;">
+                                    <img src="assets/img/about/goldsuryagrp.svg" alt="Surya Hotel Group" style="height:26px;">
+                                </div>
+                            </div>
+                        </div>
+                        <!-- logo desktop -->
+                        <div class="col-xl-2 col-lg-2 col-12 d-none d-lg-block order-lg-1 text-center text-lg-left">
+                            <div class="logo">
+                               <a href="index.html"><img class="logo-img-responsive" src="assets/img/about/logo.svg" alt=""></a>
+                            </div>
+                        </div>
+                        <div class="col-xl-10 col-lg-8 d-none d-lg-block order-lg-2">
+                            <div class="header-icon-right">
+                                <img src="assets/img/about/goldsuryagrp.svg" alt="Surya Hotel Group" style="height:32px; margin-right: 120px;">
+                            </div>
+                            <!-- main-menu -->
+                            <div class="main-menu f-right d-none d-lg-block">
+                                <nav>
+                                    <ul id="navigation">                                                                                                                                     
+                                        <li><a href="index.html">Home</a></li>
+                                        <li><a href="restaurant.html">Restaurant</a></li>
+                                        <li><a href="services.html">Service & Amenities</a></li>
+                                        <li><a href="elements.html">Meeting Room</a></li>
+                                        <li><a href="rooms.html">Rooms</a></li>
+                                        <li><a href="activities.html">Activities</a></li>
+                                        <li><a href="offers.html">Offers</a></li>
+                                        <li><a href="contact.html">Contact</a></li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>             
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Header End -->
+    </header>
+    <div class="slider-area">
+      <div class="single-slider hero-overly slider-height2 d-flex align-items-center" data-background="assets/img/hero/dhaha2.jpg">
+          <div class="container">
+              <div class="row ">
+                  <div class="col-md-11 offset-xl-1 offset-lg-1 offset-md-1">
+                      <div class="hero-caption">
+                          <span>Restaurant</span>
+                          <h2>Restaurant</h2>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+    <main>
+        <div class="row justify-content-center">
+                    <div class="col-xl-12 text-center mt-4"> <div class="font-back-tittle mb-45">
+                            <div class="archivment-front">
+                                <h3>Our Restaurant</h3>
+                            </div>
+                             <h3 class="archivment-back">Our Restaurant
+                        </div>
+                    </div>
+                </div>
+              </div>
+    </main>
+    <section class="lounge-section">
+      <div class="container">
+        <h3 class="lounge-title">Dine With Us</h3>
+       <h6 class="text-center" style="font-weight: 100; font-size: 20px;">Grand Surya Hotel Kediri, provide you meeting room which is well equipped to assist you with your next event. We are your ideal option for small corporate meetings, networking or for training sessions.</h6>
+        <h2 class="lounge-title">Kertajaya Bar Lounge</h2>
+          <h5 class="d-block text-center" style="margin-bottom: 20px; font-family: 'Playfair Display', serif;">Available daily from 8am to Midnight</h5>
+        <div class="row lounge-grid">
+          <div class="col-md-6 mb-5">
+            <div class="lounge-card">
+              <img src="assets/img/dining/lounge1.jpg" alt="Lounge 1" class="lounge-img">
+              <div class="lounge-name">Lounge 1</div>
+            </div>
+          </div>
+          <div class="col-md-6 mb-5">
+            <div class="lounge-card">
+              <img src="assets/img/dining/lounge2.jpg" alt="Lounge 2" class="lounge-img">
+              <div class="lounge-name">Lounge 2</div>
+            </div>
+          </div>
+          <div class="col-md-6 mb-5">
+            <div class="lounge-card">
+              <img src="assets/img/dining/lounge3.jpg" alt="Lounge 3" class="lounge-img">
+              <div class="lounge-name">Lounge 3</div>
+            </div>
+          </div>
+          <div class="col-md-6 mb-5">
+            <div class="lounge-card">
+              <img src="assets/img/dining/lounge4.jpg" alt="Lounge 4" class="lounge-img">
+              <div class="lounge-name">Lounge 4</div>
+            </div>
+          </div>
+        </div>
+        <div class="lounge-details-box mt-4" style="max-width:700px;margin:0 auto;display:flex;flex-wrap:wrap;gap:32px;">
+          <div style="flex:1 1 340px;min-width:220px;max-width:340px;">
+            <div class="lounge-details-title">RESTAURANT DETAILS</div>
+            <ul>
+              <li><b>Hours:</b><br>7:00am to 12:00 midnight<br><span style="font-style:italic; color:#444;">Live music performance starts at 8pm from Monday to Saturday</span></li>
+              <li><b>LOCATION:</b> Ground Floor</li>
+            </ul>
+          </div>
+          <div style="flex:1 1 180px;min-width:180px;max-width:220px;border-left:1px solid #888;padding-left:24px;">
+            <div style="font-style:italic;color:#222;font-weight:600;">ATTIRE</div>
+            <div style="color:#888;">Casual</div>
+            <div style="font-style:italic;color:#222;font-weight:600;margin-top:12px;">SERVING</div>
+            <div style="color:#888;">Drinks & Light Snacks</div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="lounge-section">
+      <div class="container">
+        <h2 class="lounge-title">DHAHA COFFEE SHOP</h2>
+          <h5 class="d-block text-center" style="margin-bottom: 20px; font-family: 'Playfair Display', serif;">Enjoy great food at Dhaha Coffee Shop restaurant</h5>
+        <div class="row lounge-grid">
+          <div class="col-md-6 mb-5">
+            <div class="lounge-card">
+              <img src="assets/img/dining/dhaha.jpg" alt="Dhaha 1" class="lounge-img">
+              <div class="lounge-name">Dhaha 1</div>
+            </div>
+          </div>
+          <div class="col-md-6 mb-5">
+            <div class="lounge-card">
+              <img src="assets/img/dining/dhaha2.jpg" alt="Dhaha 2" class="lounge-img">
+              <div class="lounge-name">Dhaha 2</div>
+            </div>
+          </div>
+          <div class="col-md-6 mb-5">
+            <div class="lounge-card">
+              <img src="assets/img/dining/dhaha3.jpg" alt="Dhaha 3" class="lounge-img">
+              <div class="lounge-name">Dhaha 3</div>
+            </div>
+          </div>
+          <div class="col-md-6 mb-5">
+            <div class="lounge-card">
+              <img src="assets/img/dining/dhaha4.jpg" alt="Dhaha 4" class="lounge-img">
+              <div class="lounge-name">Dhaha 4</div>
+            </div>
+          </div>
+        </div>
+        <div class="lounge-details-box mt-4" style="max-width:700px;margin:0 auto;display:flex;flex-wrap:wrap;gap:32px;">
+          <div style="flex:1 1 340px;min-width:220px;max-width:340px;">
+            <div class="lounge-details-title">RESTAURANT DETAILS</div>
+            <ul>
+              <li><b>HOURS:</b><br>Open 24 hours a day<br><span style="font-style:italic;">Breakfast:</span><br>6:00am – 10.00am <span style="font-style:italic;">(Monday to Friday)</span><br>6:00am – 10.30am <span style="font-style:italic;">(Saturday to Sunday)</span></li>
+              <li><b>LOCATION:</b> <span style="font-style:italic;">1st Floor</span></li>
+            </ul>
+          </div>
+          <div style="flex:1 1 180px;min-width:180px;max-width:220px;border-left:1px solid #888;padding-left:24px;">
+            <div style="font-style:italic;color:#222;font-weight:600;">ATTIRE</div>
+            <div style="color:#888;">Casual</div>
+            <div style="font-style:italic;color:#222;font-weight:600;margin-top:12px;">SERVING</div>
+            <div style="color:#888;">Breakfast, Lunch, Dinner</div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="lounge-section">
+      <div class="container">
+        <h2 class="lounge-title">Healthy Juice Bar</h2>
+         <h5 class="d-block text-center" style="margin-bottom: 20px; font-family: 'Playfair Display', serif;">Drink fresh fruit juices in a casual setting, suitable for hang-outs</h5>
+        <div class="row lounge-grid">
+          <div class="col-md-6 mb-5">
+            <div class="lounge-card">
+              <img src="assets/img/dining/juice.jpg" alt="Juice 1" class="lounge-img">
+              <div class="lounge-name">Juice 1</div>
+            </div>
+          </div>
+          <div class="col-md-6 mb-5">
+            <div class="lounge-card">
+              <img src="assets/img/dining/juice2.jpg" alt="Juice 2" class="lounge-img">
+              <div class="lounge-name">Juice 2</div>
+            </div>
+          </div>
+          <div class="col-md-6 mb-5">
+            <div class="lounge-card">
+              <img src="assets/img/dining/juice3.jpg" alt="Juice 3" class="lounge-img">
+              <div class="lounge-name">Juice 3</div>
+            </div>
+          </div>
+          <div class="col-md-6 mb-5">
+            <div class="lounge-card">
+              <img src="assets/img/dining/lounge2.jpg" alt="Juice 4" class="lounge-img">
+              <div class="lounge-name">Juice 4</div>
+            </div>
+          </div>
+        </div>
+        <div class="lounge-details-box mt-4" style="max-width:700px;margin:0 auto;display:flex;flex-wrap:wrap;gap:32px;">
+          <div style="flex:1 1 340px;min-width:220px;max-width:340px;">
+            <div class="lounge-details-title">RESTAURANT DETAILS</div>
+            <ul>
+              <li><b>Hours:</b><br>1:00pm - 9:00pm</li>
+              <li><b>LOCATION:</b> <span style="font-style:italic;">Next to swimming pool</span></li>
+            </ul>
+          </div>
+          <div style="flex:1 1 180px;min-width:180px;max-width:220px;border-left:1px solid #888;padding-left:24px;">
+            <div style="font-style:italic;color:#222;font-weight:600;">ATTIRE</div>
+            <div style="color:#888;">Casual</div>
+            <div style="font-style:italic;color:#222;font-weight:600;margin-top:12px;">SERVING</div>
+            <div style="color:#888;">Fresh Fruit Juices</div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="lounge-section">
+      <div class="container">
+        <h2 class="lounge-title">Wine Shop</h2>
+          <h5 class="d-block text-center style="margin-bottom: 20px; font-family: 'Playfair Display', serif;">The only one wine shop in town with any kind of wine from different country</h5>
+        <div class="row lounge-grid">
+          <div class="col-md-6 mb-5">
+            <div class="lounge-card">
+              <img src="assets/img/dining/wine1.jpg" alt="Wine 1" class="lounge-img">
+              <div class="lounge-name">Wine 1</div>
+            </div>
+          </div>
+          <div class="col-md-6 mb-5">
+            <div class="lounge-card">
+              <img src="assets/img/dining/wine3.jpg" alt="Wine 2" class="lounge-img">
+              <div class="lounge-name">Wine 2</div>
+            </div>
+          </div>
+          <div class="col-md-6 mb-5">
+            <div class="lounge-card">
+              <img src="assets/img/dining/wine4.jpg" alt="Wine 3" class="lounge-img">
+              <div class="lounge-name">Wine 3</div>
+            </div>
+          </div>
+          <div class="col-md-6 mb-5">
+            <div class="lounge-card">
+              <img src="assets/img/dining/wine7.jpg" alt="Wine 4" class="lounge-img">
+              <div class="lounge-name">Wine 4</div>
+            </div>
+          </div>
+        </div>
+        <div class="lounge-details-box mt-4" style="max-width:700px;margin:0 auto;display:flex;flex-wrap:wrap;gap:32px;">
+          <div style="flex:1 1 340px;min-width:220px;max-width:340px;">
+            <div class="lounge-details-title">RESTAURANT DETAILS</div>
+            <ul>
+              <li><b>Hours:</b><br>24 Hours Service</li>
+              <li><b>LOCATION:</b> <span style="font-style:italic;">Ground Floor</span></li>
+            </ul>
+          </div>
+          <div style="flex:1 1 180px;min-width:180px;max-width:220px;border-left:1px solid #888;padding-left:24px;">
+            <div style="font-style:italic;color:#222;font-weight:600;">ATTIRE</div>
+            <div style="color:#888;">Casual</div>
+            <div style="font-style:italic;color:#222;font-weight:600;margin-top:12px;">SERVING</div>
+            <div style="color:#888;">Drinks & Light Snack</div>
+          </div>
+        </div>
+      </div>
+    </section>
+       <footer>
+       <!-- Footer Start-->
+       <div class="footer-area black-bg footer-padding">
+           <div class="container">
+               <div class="row d-flex justify-content-between">
+                   <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6">
+                      <div class="single-footer-caption mb-30">
+                         <!-- logo -->
+                         <div class="footer-logo">
+                           <a href="index.html"><img src="assets/img/about/logo.svg" alt=""></a>
+                         </div>
+                         <div class="footer-social footer-social2 margin-left-15">
+                             <a href="#"><i class="fab fa-facebook-f"></i></a>
+                             <a href="#"><i class="fab fa-twitter"></i></a>
+                             <a href="#"><i class="fas fa-globe"></i></a>
+                             <a href="#"><i class="fab fa-behance"></i></a>
+                             <a href="#"><i class="fab fa-whatsapp"></i></a>
+                         </div>
+                      </div>
+                      
+                   </div>
+                   <div class="col-xl-3 col-lg-3 col-md-3 col-sm-5">
+                       <div class="single-footer-caption mb-30">
+                           <div class="footer-tittle">
+                               <h4>Quick Links</h4>
+                               <ul>
+                                   <li><a href="restaurant.html">Restaurant</a></li>
+                                   <li><a href="services.html">Services</a></li>
+                                   <li><a href="elements.html">Meeting Rooms</a></li>
+                                   <li><a href="rooms.html">Rooms</a></li>
+                               </ul>
+                           </div>
+                       </div>
+                   </div>
+                   <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3">
+                       <div class="single-footer-caption mb-30">
+                           <div class="footer-tittle">
+                               <h4>Reservations</h4>
+                               <ul>
+                                   <li><a href="#">Tel: +62 354 686 000</a></li>
+                                   <li><a href="#">Skype: SuryaHotelGroup</a></li>
+                                   <li><a href="#">reservations@hotelriver.com</a></li>
+                               </ul>
+                           </div>
+                       </div>
+                   </div>
+                   <div class="col-xl-3 col-lg-3 col-md-4  col-sm-5">
+                       <div class="single-footer-caption mb-30">
+                           <div class="footer-tittle">
+                               <h4>Our Location</h4>
+                               <ul>
+                                   <li><a href="#">Jl. Dhoho 95, Kemasan - Kota Kediri,</a></li>
+                                   <li><a href="#">Jawa Timur – Indonesia 64129</a></li>
+                               </ul>
+                               <!-- Form -->
+                       
+                           </div>
+                       </div>
+                   </div>
+                   <div class="footer-pera">
+                    <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> Surya Hotel group All rights reserved</a>
+<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+               </div>
+               </div>
+           </div>
+       </div>
+       <!-- Footer End-->
+   </footer>
+   <!-- JS here -->
+        <script src="./assets/js/vendor/modernizr-3.5.0.min.js"></script>
+        <script src="./assets/js/vendor/jquery-1.12.4.min.js"></script>
+        <script src="./assets/js/popper.min.js"></script>
+        <script src="./assets/js/bootstrap.min.js"></script>
+        <script src="./assets/js/jquery.slicknav.min.js"></script>
+        <script src="./assets/js/owl.carousel.min.js"></script>
+        <script src="./assets/js/slick.min.js"></script>
+        <script src="./assets/js/gijgo.min.js"></script>
+        <script src="./assets/js/wow.min.js"></script>
+        <script src="./assets/js/animated.headline.js"></script>
+        <script src="./assets/js/jquery.magnific-popup.js"></script>
+        <script src="./assets/js/jquery.scrollUp.min.js"></script>
+        <script src="./assets/js/jquery.nice-select.min.js"></script>
+        <script src="./assets/js/jquery.sticky.js"></script>
+        <script src="./assets/js/contact.js"></script>
+        <script src="./assets/js/jquery.form.js"></script>
+        <script src="./assets/js/jquery.validate.min.js"></script>
+        <script src="./assets/js/mail-script.js"></script>
+        <script src="./assets/js/jquery.ajaxchimp.min.js"></script>
+        <script src="./assets/js/plugins.js"></script>
+        <script src="./assets/js/main.js"></script>
+    </body>
+</html> 

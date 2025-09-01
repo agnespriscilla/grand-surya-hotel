@@ -1,0 +1,650 @@
+<!doctype html>
+<html class="no-js" lang="zxx">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<title>Meeting Rooms</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- <link rel="manifest" href="site.webmanifest"> -->
+	<link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.png">
+	<!-- Place favicon.ico in the root directory -->
+
+	
+ <!-- CSS here -->
+   <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+   <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+   <link rel="stylesheet" href="assets/css/gijgo.css">
+   <link rel="stylesheet" href="assets/css/slicknav.css">
+   <link rel="stylesheet" href="assets/css/animate.min.css">
+   <link rel="stylesheet" href="assets/css/magnific-popup.css">
+   <link rel="stylesheet" href="assets/css/fontawesome-all.min.css">
+   <link rel="stylesheet" href="assets/css/themify-icons.css">
+   <link rel="stylesheet" href="assets/css/slick.css">
+   <link rel="stylesheet" href="assets/css/nice-select.css">
+   <link rel="stylesheet" href="assets/css/style.css">
+   <link rel="stylesheet" href="assets/css/responsive.css">
+    <style>
+      .dining-menu-container {
+        max-width: 400px;
+        margin: 80px auto 120px auto;
+        text-align: center;
+      }
+      .dining-menu-title {
+        font-family: 'Playfair Display', serif;
+        font-size: 2.5rem;
+        font-style: italic;
+        letter-spacing: 0.1em;
+        margin-bottom: 2.5rem;
+        font-weight: 500;
+      }
+      .dining-menu-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+      .dining-menu-list li {
+        font-family: 'Playfair Display', serif;
+        font-size: 1.2rem;
+        font-style: italic;
+        color: #222;
+        margin: 0.7rem 0;
+        letter-spacing: 0.08em;
+        position: relative;
+      }
+      .dining-menu-list li.gray {
+        color: #bbb;
+        font-style: italic;
+        font-weight: 500;
+        letter-spacing: 0.12em;
+      }
+      .dining-menu-hr {
+        border: none;
+        border-top: 1.5px solid #222;
+        margin: 0.7rem 0 0.7rem 0;
+        width: 100%;
+        opacity: 0.7;
+      }
+      .lounge-section {
+        background: #fff;
+        padding: 40px 0 60px 0;
+      }
+      .lounge-title {
+        font-family: 'Playfair Display', serif;
+        font-size: 2rem;
+        font-style: italic;
+        color: #b59b5b;
+        margin-bottom: 2.5rem;
+        text-align: center;
+        letter-spacing: 0.08em;
+      }
+      .lounge-grid {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      .lounge-card {
+        background: #faf7f2;
+        border-radius: 12px;
+        box-shadow: 0 4px 24px rgba(0,0,0,0.07);
+        overflow: hidden;
+        transition: box-shadow 0.2s;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+      }
+      .lounge-card:hover {
+        box-shadow: 0 8px 32px rgba(181,155,91,0.13);
+      }
+      .lounge-img {
+        width: 100%;
+        height: 240px;
+        object-fit: cover;
+        border-top-left-radius: 12px;
+        border-top-right-radius: 12px;
+      }
+      .lounge-info {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 24px 20px 20px 20px;
+        gap: 24px;
+      }
+      .lounge-details-box {
+        background: #ded8cb;
+        border-radius: 4px;
+        padding: 16px 18px 12px 18px;
+        flex: 1 1 60%;
+      }
+      .lounge-details-title {
+        color: #b59b5b;
+        font-style: italic;
+        font-weight: 600;
+        margin-bottom: 8px;
+        letter-spacing: 0.04em;
+      }
+      .lounge-details-box ul {
+        padding-left: 18px;
+        margin-bottom: 0;
+      }
+      .lounge-details-box li {
+        margin-bottom: 10px;
+        font-size: 1rem;
+        color: #222;
+      }
+      .lounge-side-details {
+        min-width: 120px;
+        padding-left: 18px;
+        font-size: 0.98rem;
+        color: #222;
+      }
+      .lounge-side-details b {
+        color: #222;
+        font-size: 1.01em;
+        letter-spacing: 0.03em;
+      }
+      .lounge-side-details .mt-3 {
+        margin-top: 1.2em;
+      }
+      @media (max-width: 991px) {
+        .lounge-info { flex-direction: column; gap: 10px; }
+        .lounge-side-details { padding-left: 0; min-width: 0; }
+      }
+      @media (max-width: 767px) {
+        .lounge-grid { flex-direction: column; }
+        .col-md-6 { max-width: 100%; flex: 0 0 100%; }
+        .lounge-img { height: 180px; }
+      }
+      .lounge-name {
+        text-align: center;
+        font-family: 'Playfair Display', serif;
+        font-size: 1.1rem;
+        font-style: italic;
+        color: #b59b5b;
+        margin-top: 10px;
+        margin-bottom: 0;
+        letter-spacing: 0.04em;
+      }
+    </style>
+    <style>
+@media (max-width: 767px) {
+    .slicknav_menu {
+        left: 0 !important;
+        right: auto !important;
+    }
+    .slicknav_btn {
+        float: left !important;
+        left: 0 !important;
+        right: auto !important;
+        margin-left: 18px !important;
+        margin-right: 0 !important;
+    }
+    .slicknav_nav {
+        left: -260px !important;
+        right: auto !important;
+        width: 220px !important;
+        position: fixed !important;
+        top: 0 !important;
+        height: 100vh !important;
+        background: #fff !important;
+        box-shadow: 2px 0 8px rgba(0,0,0,0.08);
+        z-index: 2147483647 !important;
+        transition: left 0.3s cubic-bezier(.4,0,.2,1);
+        overflow-y: auto;
+        pointer-events: auto !important;
+    }
+    .slicknav_menu.slicknav_open .slicknav_nav {
+        left: 0 !important;
+    }
+}
+@media (max-width: 767px) {
+    .main-header .container > .row {
+        min-height: 58px;
+    }
+    .header-icon-right-mobile img {
+        height: 26px !important;
+    }
+    .slicknav_btn {
+        float: left !important;
+        margin-left: 0px !important;
+        margin-top: 25px !important;
+    }
+    .d-flex.justify-content-between.align-items-center {
+        padding: 0 8px 0 2px !important;
+    }
+}
+@media (min-width: 992px) {
+    .header-icon-right img {
+        height: 32px !important;
+    }
+}
+</style>
+</head>
+
+<body>
+	
+    <!-- Preloader Start -->
+    <div id="preloader-active">
+        <div class="preloader d-flex align-items-center justify-content-center">
+            <div class="preloader-inner position-relative">
+                <div class="preloader-circle"></div>
+                <div class="preloader-img pere-text">
+                    <strong>Hotel</strong>
+                </div>
+            </div>
+        </div>
+    </div>
+	<!-- Preloader Start -->
+	
+    <header>
+        <!-- Header Start -->
+       <div class="header-slider-area">
+        <div class="main-header ">
+            <div class="container">
+                <div class="row align-items-center">
+                    <!-- Mobile Header Row: hamburger di kiri atas, logo kecil di kanan atas, ukuran dan tinggi bar sama index.html -->
+                    <div class="col-12 d-block d-lg-none order-1" style="position:relative;">
+                        <div class="d-flex justify-content-between align-items-center" style="position:relative; min-height:58px; padding: 0 8px;">
+                            <div class="mobile_menu mobile-menu-left" style="flex:0 0 auto;"></div>
+                            <div style="flex:1 1 auto;"></div>
+                            <div class="header-icon-right-mobile" style="flex:0 0 auto; display:flex; align-items:center; padding-left:8px;">
+                                <img src="assets/img/about/goldsuryagrp.svg" alt="Surya Hotel Group" style="height:26px;">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- logo desktop -->
+                    <div class="col-xl-2 col-lg-2 col-12 d-none d-lg-block order-lg-1 text-center text-lg-left">
+                        <div class="logo">
+                           <a href="index.html"><img class="logo-img-responsive" src="assets/img/about/logo.svg" alt=""></a>
+                        </div>
+                    </div>
+                    <div class="col-xl-10 col-lg-8 d-none d-lg-block order-lg-2">
+                        <div class="header-icon-right">
+                            <img src="assets/img/about/goldsuryagrp.svg" alt="Surya Hotel Group" style="height:32px; margin-right: 120px;">
+                        </div>
+                        <!-- main-menu -->
+                        <div class="main-menu f-right d-none d-lg-block">
+                            <nav>
+                                <ul id="navigation">                                                                                                                                     
+                                    <li><a href="index.html">Home</a></li>
+                                    <li><a href="restaurant.html">Restaurant</a></li>
+                                    <li><a href="services.html">Service & Amenities</a></li>
+                                    <li><a href="elements.html">Meeting Room</a></li>
+                                    <li><a href="rooms.html">Rooms</a></li>
+                                    <li><a href="activities.html">Activities</a></li>
+                                    <li><a href="offers.html">Offers</a></li>
+                                    <li><a href="contact.html">Contact</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>             
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Header End -->
+	</header>
+	
+    <!-- slider Area Start-->
+    <div class="slider-area">
+        <div class="single-slider hero-overly slider-height2 d-flex align-items-center" data-background="assets/img/hero/gwf4.jpg" >
+            <div class="container">
+                <div class="row ">
+                    <div class="col-md-11 offset-xl-1 offset-lg-1 offset-md-1">
+                        <div class="hero-caption">
+                            <span>Meeting Room</span>
+                            <h2>Meeting Room</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- slider Area End-->
+
+    <!-- Meeting Room Section Start -->
+    <section class="room-area r-padding1" style="background:#f9fafc;">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-xl-8">
+            <div class="font-back-tittle mb-45">
+              <div class="archivment-front">
+                <h3>Hosting Events</h3>
+              </div>
+              <h3 class="archivment-back">Hosting Events</h3>
+              <h6>Grand Surya Hotel Kediri, provide you meeting room which is well equipped to assist you with your next event. We are your ideal option for small corporate meetings, networking or for training sessions.</h6>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <!-- Kilisuci -->
+          <div class="col-xl-6 col-lg-8 col-md-8">
+            <div class="single-room mb-50">
+              <div class="room-img">
+                <a href="#" class="open-meeting-modal"
+                  data-title="Kilisuci"
+                  data-detail='<div style="display:flex;gap:32px;flex-wrap:wrap;"><div style="min-width:220px;max-width:340px;"><div style="font-style:italic;color:#b59b5b;font-weight:600;margin-bottom:8px;">FUNCTION ROOM DETAILS</div><ul style="margin-bottom:12px;"><li><b>Room Setup</b></li><li><b>Wi-fi,</b> Standard sound system & microphone</li><li><b>Provided:</b> Screen, White Board, Flip Chart, Marker, Pen, Notepad, Vinyl Banner</li></ul></div><div style="min-width:180px;max-width:220px;border-left:1px solid #888;padding-left:24px;"><div style="font-style:italic;color:#222;font-weight:600;">Minimum Guests</div><div style="color:#888;">30pax</div><div style="font-style:italic;color:#222;font-weight:600;margin-top:12px;">Tax & Service Charges</div><div style="color:#888;">21% (included)</div></div></div>'
+                  data-images="kilisuci.jpg,kilisuci2.jpg,kilisuci3.jpg,kilisuci4.jpg,kili.jpg">
+                  <img src="assets/img/elements/kilisuci.jpg" alt="Kilisuci">
+                </a>
+              </div>
+              <div class="room-caption">
+                <h3><a href="#" class="open-meeting-modal"
+                  data-title="Kilisuci"
+                  data-detail='<div style="display:flex;gap:32px;flex-wrap:wrap;"><div style="min-width:220px;max-width:340px;"><div style="font-style:italic;color:#b59b5b;font-weight:600;margin-bottom:8px;">FUNCTION ROOM DETAILS</div><ul style="margin-bottom:12px;"><li><b>Room Setup</b></li><li><b>Wi-fi,</b> Standard sound system & microphone</li><li><b>Provided:</b> Screen, White Board, Flip Chart, Marker, Pen, Notepad, Vinyl Banner</li></ul></div><div style="min-width:180px;max-width:220px;border-left:1px solid #888;padding-left:24px;"><div style="font-style:italic;color:#222;font-weight:600;">Minimum Guests</div><div style="color:#888;">30pax</div><div style="font-style:italic;color:#222;font-weight:600;margin-top:12px;">Tax & Service Charges</div><div style="color:#888;">21% (included)</div></div></div>'
+                  data-images="kilisuci.jpg,kilisuci2.jpg,kilisuci3.jpg,kilisuci4.jpg">Kilisuci</a></h3>
+                <div class="per-night">
+                  <h6>Our Kilisuci Ballroom is 288sqm wide and can be divided into 3 different rooms. Depending on the size of your event, different arrangements can be made to accommodate 50 to 400 guests.
+                  Please              <a href="#" style="color: blue ; font-style: italic;" class="open-meeting-modal"
+                  data-images="kili.jpg"> Click Here
+                </a>  to view the different pricing and arrangements.</h6>
+                 
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Executive -->
+          <div class="col-xl-6 col-lg-8 col-md-8">
+            <div class="single-room mb-50">
+              <div class="room-img">
+                <a href="#" class="open-meeting-modal"
+                  data-title="Executive"
+                  data-detail='<div style="display:flex;gap:32px;flex-wrap:wrap;"><div style="min-width:220px;max-width:340px;"><div style="font-style:italic;color:#b59b5b;font-weight:600;margin-bottom:8px;">FUNCTION ROOM DETAILS</div><ul style="margin-bottom:12px;"><li><b>Room Setup</b></li><li><b>Wi-fi,</b> LCD Projector & Screen</li><li><b>Provided:</b> Flip Chart, Marker, Pen, Notepad</li></ul></div><div style="min-width:180px;max-width:220px;border-left:1px solid #888;padding-left:24px;"><div style="font-style:italic;color:#222;font-weight:600;">Minimum Guests</div><div style="color:#888;">15pax</div><div style="font-style:italic;color:#222;font-weight:600;margin-top:12px;">Tax & Service Charges</div><div style="color:#888;">21% (included)</div></div></div>'
+                  data-images="exec.jpg,exec2.jpg,exec3.jpg,exec4.jpg">
+                  <img src="assets/img/elements/exec.jpg" alt="Executive">
+                </a>
+              </div>
+              <div class="room-caption">
+                <h3><a href="#" class="open-meeting-modal"
+                  data-title="Executive"
+                  data-detail='<div style="display:flex;gap:32px;flex-wrap:wrap;"><div style="min-width:220px;max-width:340px;"><div style="font-style:italic;color:#b59b5b;font-weight:600;margin-bottom:8px;">FUNCTION ROOM DETAILS</div><ul style="margin-bottom:12px;"><li><b>Room Setup</b></li><li><b>Wi-fi,</b> LCD Projector & Screen</li><li><b>Provided:</b> Flip Chart, Marker, Pen, Notepad</li></ul></div><div style="min-width:180px;max-width:220px;border-left:1px solid #888;padding-left:24px;"><div style="font-style:italic;color:#222;font-weight:600;">Minimum Guests</div><div style="color:#888;">15pax</div><div style="font-style:italic;color:#222;font-weight:600;margin-top:12px;">Tax & Service Charges</div><div style="color:#888;">21% (included)</div></div></div>'
+                  data-images="exec.jpg,exec2.jpg,exec3.jpg,exec4.jpg">Executive</a></h3>
+                <div class="per-night">
+                   <h6>Our Executive Meeting Room is 45sqm wide and can accommodate up to 30 guests.
+Please             <a href="#" style="color: blue ; font-style: italic;" class="open-meeting-modal"
+                  data-images="kili.jpg"> Click Here
+                </a> to view the different pricing and arrangements.</h6>
+                 
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <!-- Tegowangi -->
+          <div class="col-xl-6 col-lg-8 col-md-8">
+            <div class="single-room mb-50">
+              <div class="room-img">
+                <a href="#" class="open-meeting-modal"
+                  data-title="Tegowangi"
+                  data-detail='<div style="display:flex;gap:32px;flex-wrap:wrap;"><div style="min-width:220px;max-width:340px;"><div style="font-style:italic;color:#b59b5b;font-weight:600;margin-bottom:8px;">FUNCTION ROOM DETAILS</div><ul style="margin-bottom:12px;"><li><b>Room Setup</b></li><li><b>Wi-fi,</b> Projector & Sound System</li><li><b>Provided:</b> Flip Chart, Marker, Pen, Notepad</li></ul></div><div style="min-width:180px;max-width:220px;border-left:1px solid #888;padding-left:24px;"><div style="font-style:italic;color:#222;font-weight:600;">Minimum Guests</div><div style="color:#888;">10pax</div><div style="font-style:italic;color:#222;font-weight:600;margin-top:12px;">Tax & Service Charges</div><div style="color:#888;">21% (included)</div></div></div>'
+                  data-images="tegowangi.jpg,tegowangi2.jpg,tegowangi3.jpg,tegowangi4.jpg">
+                  <img src="assets/img/elements/tegowangi.jpg" alt="Tegowangi">
+                </a>
+              </div>
+              <div class="room-caption">
+                <h3><a href="#" class="open-meeting-modal"
+                  data-title="Tegowangi"
+                  data-detail='<div style="display:flex;gap:32px;flex-wrap:wrap;"><div style="min-width:220px;max-width:340px;"><div style="font-style:italic;color:#b59b5b;font-weight:600;margin-bottom:8px;">FUNCTION ROOM DETAILS</div><ul style="margin-bottom:12px;"><li><b>Room Setup</b></li><li><b>Wi-fi,</b> Projector & Sound System</li><li><b>Provided:</b> Flip Chart, Marker, Pen, Notepad</li></ul></div><div style="min-width:180px;max-width:220px;border-left:1px solid #888;padding-left:24px;"><div style="font-style:italic;color:#222;font-weight:600;">Minimum Guests</div><div style="color:#888;">10pax</div><div style="font-style:italic;color:#222;font-weight:600;margin-top:12px;">Tax & Service Charges</div><div style="color:#888;">21% (included)</div></div></div>'
+                  data-images="tegowangi.jpg,tegowangi2.jpg,tegowangi3.jpg,tegowangi4.jpg">Tegowangi</a></h3>
+                <div class="per-night">
+                 <h6>Tegowangi Function Room is suitable for meetings, weddings, product launch, birthday parties and gatherings. With a total area of 254sqm, it can be divided into 2 different rooms to accommodate smaller events.
+Please <a href="#" style="color: blue ; font-style: italic;" class="open-meeting-modal"
+                  data-images="kili.jpg"> Click Here
+                </a>to view the different pricing and arrangements.</h6>
+                 
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Go Wang Fu -->
+          <div class="col-xl-6 col-lg-8 col-md-8">
+            <div class="single-room mb-50">
+              <div class="room-img">
+                <a href="#" class="open-meeting-modal"
+                  data-title="Go Wang Fu"
+                  data-detail='<div style="display:flex;gap:32px;flex-wrap:wrap;"><div style="min-width:220px;max-width:340px;"><div style="font-style:italic;color:#b59b5b;font-weight:600;margin-bottom:8px;">FUNCTION ROOM DETAILS</div><ul style="margin-bottom:12px;"><li><b>Room Setup</b></li><li><b>Wi-fi,</b> Projector & Sound System</li><li><b>Provided:</b> Flip Chart, Marker, Pen, Notepad</li></ul></div><div style="min-width:180px;max-width:220px;border-left:1px solid #888;padding-left:24px;"><div style="font-style:italic;color:#222;font-weight:600;">Minimum Guests</div><div style="color:#888;">8pax</div><div style="font-style:italic;color:#222;font-weight:600;margin-top:12px;">Tax & Service Charges</div><div style="color:#888;">21% (included)</div></div></div>'
+                  data-images="gwf.jpg,gwf2.jpg,gwf3.jpg,gwf4.jpg">
+                  <img src="assets/img/elements/gwf.jpg" alt="Go Wang Fu">
+                </a>
+              </div>
+              <div class="room-caption">
+                <h3><a href="#" class="open-meeting-modal"
+                  data-title="Go Wang Fu"
+                  data-detail='<div style="display:flex;gap:32px;flex-wrap:wrap;"><div style="min-width:220px;max-width:340px;"><div style="font-style:italic;color:#b59b5b;font-weight:600;margin-bottom:8px;">FUNCTION ROOM DETAILS</div><ul style="margin-bottom:12px;"><li><b>Room Setup</b></li><li><b>Wi-fi,</b> Projector & Sound System</li><li><b>Provided:</b> Flip Chart, Marker, Pen, Notepad</li></ul></div><div style="min-width:180px;max-width:220px;border-left:1px solid #888;padding-left:24px;"><div style="font-style:italic;color:#222;font-weight:600;">Minimum Guests</div><div style="color:#888;">8pax</div><div style="font-style:italic;color:#222;font-weight:600;margin-top:12px;">Tax & Service Charges</div><div style="color:#888;">21% (included)</div></div></div>'
+                  data-images="gwf.jpg,gwf2.jpg,gwf3.jpg,gwf4.jpg">Go Wang Fu</a></h3>
+                <div class="per-night">
+                  <h6>Gong Wang Fu
+Please  <a href="#" style="color: blue ; font-style: italic;" class="open-meeting-modal"
+                  data-images="kili.jpg"> Click Here
+                </a>to view the different pricing and arrangements.</h6>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Meeting Room Section End -->
+
+    <!-- Modal Meeting Room -->
+    <div class="modal fade" id="meetingRoomModal" tabindex="-1" role="dialog" aria-labelledby="meetingRoomModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header border-0">
+            <h4 class="modal-title" id="meetingRoomModalLabel"></h4>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="owl-carousel owl-theme meeting-modal-carousel mb-4"></div>
+            <div id="meetingRoomDetail" class="mt-4"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <style>
+      .meeting-modal-carousel {
+        margin-bottom: 2rem;
+      }
+      .meeting-modal-carousel .item img {
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      }
+      #meetingRoomDetail {
+        padding: 1rem;
+        background: #f8f9fa;
+        border-radius: 8px;
+        border-left: 4px solid #b59b5b;
+      }
+    </style>
+    <script src="assets/js/vendor/jquery-1.12.4.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/owl.carousel.min.js"></script>
+    <script>
+      $(document).ready(function(){
+        console.log("Document ready!");
+        console.log("Found", $(".open-meeting-modal").length, "modal triggers");
+        
+        // Bind modal to both image and title
+        $(".open-meeting-modal").on("click", function(e){
+          e.preventDefault();
+          console.log("Modal clicked!");
+          
+          var title = $(this).data("title");
+          var detail = $(this).data("detail");
+          var images = $(this).data("images").split(",");
+          
+          console.log("Title:", title);
+          console.log("Images:", images);
+          
+          $("#meetingRoomModalLabel").text(title);
+          $("#meetingRoomDetail").html(detail);
+          
+          var carousel = $(".meeting-modal-carousel");
+          carousel.html("");
+          
+          images.forEach(function(img){
+            carousel.append('<div class="item"><img src="assets/img/elements/'+img+'" class="img-fluid rounded shadow mb-2" alt="'+title+'"></div>');
+          });
+          
+          // Destroy existing carousel if it exists
+          if (carousel.hasClass('owl-loaded')) {
+            carousel.trigger('destroy.owl.carousel');
+            carousel.removeClass('owl-loaded owl-carousel');
+          }
+          
+          carousel.addClass('owl-carousel');
+          carousel.owlCarousel({
+            items:1,
+            loop:true,
+            margin:10,
+            nav:true,
+            dots:true,
+            navText:["<span style='font-size:2rem;'>&#8592;</span>","<span style='font-size:2rem;'>&#8594;</span>"]
+          });
+          
+          $("#meetingRoomModal").modal("show");
+        });
+        
+        $('#meetingRoomModal').on('hidden.bs.modal', function () {
+          $(".meeting-modal-carousel").trigger('destroy.owl.carousel').html("");
+        });
+      });
+    </script>
+
+   <footer>
+       <!-- Footer Start-->
+       <div class="footer-area black-bg footer-padding">
+           <div class="container">
+               <div class="row d-flex justify-content-between">
+                   <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6">
+                      <div class="single-footer-caption mb-30">
+                         <!-- logo -->
+                         <div class="footer-logo">
+                           <a href="index.html"><img src="assets/img/about/logo.svg" alt=""></a>
+                         </div>
+                         <div class="footer-social footer-social2 margin-left-15">
+                             <a href="#"><i class="fab fa-facebook-f"></i></a>
+                             <a href="#"><i class="fab fa-twitter"></i></a>
+                             <a href="#"><i class="fas fa-globe"></i></a>
+                             <a href="#"><i class="fab fa-behance"></i></a>
+                             <a href="#"><i class="fab fa-whatsapp"></i></a>
+                         </div>
+                      </div>
+                      
+                   </div>
+                   <div class="col-xl-3 col-lg-3 col-md-3 col-sm-5">
+                       <div class="single-footer-caption mb-30">
+                           <div class="footer-tittle">
+                               <h4>Quick Links</h4>
+                               <ul>
+                                   <li><a href="restaurant.html">Restaurant</a></li>
+                                   <li><a href="services.html">Services</a></li>
+                                   <li><a href="elements.html">Meeting Rooms</a></li>
+                                   <li><a href="rooms.html">Rooms</a></li>
+                               </ul>
+                           </div>
+                       </div>
+                   </div>
+                   <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3">
+                       <div class="single-footer-caption mb-30">
+                           <div class="footer-tittle">
+                               <h4>Reservations</h4>
+                               <ul>
+                                   <li><a href="#">Tel: +62 354 686 000</a></li>
+                                   <li><a href="#">Skype: SuryaHotelGroup</a></li>
+                                   <li><a href="#">reservations@hotelriver.com</a></li>
+                               </ul>
+                           </div>
+                       </div>
+                   </div>
+                   <div class="col-xl-3 col-lg-3 col-md-4  col-sm-5">
+                       <div class="single-footer-caption mb-30">
+                           <div class="footer-tittle">
+                               <h4>Our Location</h4>
+                               <ul>
+                                   <li><a href="#">Jl. Dhoho 95, Kemasan - Kota Kediri,</a></li>
+                                   <li><a href="#">Jawa Timur – Indonesia 64129</a></li>
+                               </ul>
+                               <!-- Form -->
+                       
+                           </div>
+                       </div>
+                   </div>
+                   <div class="footer-pera">
+                    <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> Surya Hotel group All rights reserved</a>
+<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+               </div>
+               </div>
+           </div>
+       </div>
+       <!-- Footer End-->
+   </footer>
+
+<!-- JS here -->
+	
+		<!-- All JS Custom Plugins Link Here here -->
+        <script src="./assets/js/vendor/modernizr-3.5.0.min.js"></script>
+		
+		<!-- Jquery, Popper, Bootstrap -->
+        <script src="./assets/js/vendor/jquery-1.12.4.min.js"></script>
+        <script src="./assets/js/popper.min.js"></script>
+        <script src="./assets/js/bootstrap.min.js"></script>
+	    <!-- Jquery Mobile Menu -->
+        <script src="./assets/js/jquery.slicknav.min.js"></script>
+
+		<!-- Jquery Slick , Owl-Carousel Plugins -->
+        <script src="./assets/js/owl.carousel.min.js"></script>
+        <script src="./assets/js/slick.min.js"></script>
+        <!-- Date Picker -->
+        <script src="./assets/js/gijgo.min.js"></script>
+		<!-- One Page, Animated-HeadLin -->
+        <script src="./assets/js/wow.min.js"></script>
+		<script src="./assets/js/animated.headline.js"></script>
+		<script src="./assets/js/jquery.magnific-popup.js"></script>
+		
+		<!-- Scrollup, nice-select, sticky -->
+        <script src="./assets/js/jquery.scrollUp.min.js"></script>
+        <script src="./assets/js/jquery.nice-select.min.js"></script>
+		<script src="./assets/js/jquery.sticky.js"></script>
+        
+        <!-- contact js -->
+        <script src="./assets/js/contact.js"></script>
+        <script src="./assets/js/jquery.form.js"></script>
+        <script src="./assets/js/jquery.validate.min.js"></script>
+        <script src="./assets/js/mail-script.js"></script>
+        <script src="./assets/js/jquery.ajaxchimp.min.js"></script>
+        
+		<!-- Jquery Plugins, main Jquery -->	
+        <script src="./assets/js/plugins.js"></script>
+        <script src="./assets/js/main.js"></script>
+        
+    <script>
+        $('#datepicker').datepicker({
+            iconsLibrary: 'fontawesome',
+            disableDaysOfWeek: [0, 0],
+        //     icons: {
+        //      rightIcon: '<span class="fa fa-caret-down"></span>'
+        //  }
+        });
+        $('#datepicker2').datepicker({
+            iconsLibrary: 'fontawesome',
+            icons: {
+             rightIcon: '<span class="fa fa-caret-down"></span>'
+         }
+
+        });
+        var timepicker = $('#timepicker').timepicker({
+         format: 'HH.MM'
+     });
+    </script>
+</body>
+</html>
