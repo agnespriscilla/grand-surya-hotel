@@ -1,6 +1,6 @@
-# Grand Surya Hotel — Official Website
+# Grand Surya Hotel Official Website
 
-> Front-End Web Developer Internship · Grand Surya Hotel, Kediri · June – August 2025
+> Front-End Web Developer Internship · Grand Surya Hotel, Kediri
 
 Official hotel website designed and developed from scratch as part of an internship at Grand Surya Hotel, Kediri. Built with a focus on responsive design, cross-browser compatibility, and a user-friendly interface that reflects the hotel's brand identity.
 
@@ -34,7 +34,7 @@ This project is the official website for **Grand Surya Hotel**, a hotel property
 
 ## Features
 
-- Responsive layout — optimized for desktop, tablet, and mobile
+- Responsive layout optimized for desktop, tablet, and mobile
 - Cross-browser compatible interface
 - SCSS-based styling with modular structure compiled to CSS
 - Contact form with PHP backend processing (`contact_process.php`)
@@ -87,7 +87,7 @@ grand-surya-hotel/
 ## Getting Started
 
 ### View the website
-Open `index.html` directly in any modern browser — no server required for most pages.
+Open `index.html` directly in any modern browser no server required for most pages.
 
 ### SCSS Compilation (for development)
 ```bash
@@ -125,6 +125,6 @@ This website was developed during a **Front-End Web Development Internship** at 
 **Agnes Priscilla Sekartaji Hadikusuma**  
 S1 Teknik Informatika · Institut Teknologi Sepuluh Nopember (ITS) Surabaya
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=flat&logo=linkedin&logoColor=white)](https://linkedin.com/in/agnespriscilla)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=flat&logo=linkedin&logoColor=white)](https://linkedin.com/in/agnespriscilla33)
 [![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat&logo=github&logoColor=white)](https://github.com/agnespriscilla)
 [![Email](https://img.shields.io/badge/Email-D14836?style=flat&logo=gmail&logoColor=white)](mailto:agnes.priscilla33@gmail.com)
